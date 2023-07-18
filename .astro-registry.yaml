@@ -1,0 +1,8 @@
+# These categories will be applied to all DAGs in the repo.
+categories:
+  - Airflow Fundamentals
+# List of DAGs that should be published to the Astronomer Registry.
+dags:
+  - path: dags/telephone_game.py
+  - path: dags/example_complex_dependencies_1.py
+  - path: dags/example_task_group_mapping
