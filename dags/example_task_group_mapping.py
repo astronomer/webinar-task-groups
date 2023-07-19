@@ -38,7 +38,7 @@ def example_task_group_mapping():
 
         multiply_by_100(add_2(my_num))
 
-    # creating 6 mapped task group instances of the task group group1
+    # creating mapped task group instances of the task group group1
     tg1.partial(vegetables="tomatoes!").expand(my_num=get_list_of_numbers())
 
 

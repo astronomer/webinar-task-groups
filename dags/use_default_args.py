@@ -29,6 +29,7 @@ def use_default_args():
     ):  # this `bash_command` is NOT picked up by the BashOperator
         BashOperator(task_id="t1")
         BashOperator(task_id="t2", bash_command="echo 0")
+        BashOperator(task_id="t3", bash_command=bash_command)
 
         @task
         def print_a_default_arg(my_default_arg):
@@ -47,7 +48,7 @@ def use_default_args():
         print_direct_arg_1(direct_arg)
         print_direct_arg_2(bash_command)
 
-    tg1_object = tg1(direct_arg="Hola!", bash_command="echo this_will_not_be_printed")
+    tg1_object = tg1(direct_arg="Hola!", bash_command="echo Hallo!")
 
     with TaskGroup(
         group_id="task_group_2",
